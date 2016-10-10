@@ -1,5 +1,10 @@
 <h1>
   {{title}}
 </h1>
-<app-databinding></app-databinding>
-
+<!--<app-databinding></app-databinding>-->
+<app-lifecycle *ngIf="!delete" [bindable]="boundValue">
+  <p #boundContent>{{test}}</p>
+</app-lifecycle>
+<button (click)="delete = true">Delete</button>
+<button (click)="test = 'Changed value'">Change ng-content</button>
+<button (click)="boundValue = 2000">Change binding</button>
