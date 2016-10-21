@@ -11,6 +11,11 @@ import { PropertyBindingComponent } from './databinding/property-binding.compone
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { TwoWayBindingComponent } from './databinding/two-way--binding.component';
 import { LifecycleComponent } from './lifecycle.component';
+import { UserComponent } from './user/user.component';
+import { UserDetailComponent } from './user/user-detail.component';
+import { UserEditComponent } from './user/user-edit.component';
+import { HomeComponent } from './home-component.component';
+import {routing} from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -21,12 +26,17 @@ import { LifecycleComponent } from './lifecycle.component';
     PropertyBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    UserComponent,
+    UserDetailComponent,
+    UserEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

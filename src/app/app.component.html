@@ -1,6 +1,22 @@
 <h1>
   {{title}}
 </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <h1>Hello World!</h1>
+      <hr>
+      <a [routerLink]="['']" [queryParams]="{analytics: 500}">Home</a> |
+      <a [routerLink]="['user']">User</a> |
+      <input type="text" #id (input)="0"> |
+      <a [routerLink]="['user', id.value]">Selected</a>
+      <hr>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
 <!--<app-databinding></app-databinding>-->
 <app-lifecycle *ngIf="!delete" [bindable]="boundValue">
   <p #boundContent>{{test}}</p>
