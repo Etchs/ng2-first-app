@@ -17,6 +17,7 @@ import { UserEditComponent } from './user/user-edit.component';
 import { HomeComponent } from './home-component.component';
 import {routing} from "./app.routes";
 import {UserDetailGaurd} from "./user/user-detail.gaurd";
+import {UserEditOutGaurd} from "./user/user-edit.gaurd";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import {UserDetailGaurd} from "./user/user-detail.gaurd";
     HttpModule,
     routing
   ],
-  providers: [UserDetailGaurd],
+  providers: [UserDetailGaurd, UserEditOutGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
