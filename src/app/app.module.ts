@@ -18,6 +18,8 @@ import { HomeComponent } from './home-component.component';
 import {routing} from "./app.routes";
 import {UserDetailGaurd} from "./user/user-detail.gaurd";
 import {UserEditOutGaurd} from "./user/user-edit.gaurd";
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { DataDrivenComponent } from './data-driven/data-driven.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {UserEditOutGaurd} from "./user/user-edit.gaurd";
     UserComponent,
     UserDetailComponent,
     UserEditComponent,
-    HomeComponent
+    HomeComponent,
+    TemplateDrivenComponent,
+    DataDrivenComponent
   ],
   imports: [
     BrowserModule,

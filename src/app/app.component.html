@@ -1,6 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Forms</h1>
+      <app-template-driven></app-template-driven>
+      <hr>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-10">
@@ -19,9 +26,9 @@
 
 
 <!--<app-databinding></app-databinding>-->
-<app-lifecycle *ngIf="!delete" [bindable]="boundValue">
-  <p #boundContent>{{test}}</p>
-</app-lifecycle>
+<!--<app-lifecycle *ngIf="!delete" [bindable]="boundValue">-->
+  <!--<p #boundContent>{{test}}</p>-->
+<!--</app-lifecycle>-->
 <button (click)="delete = true">Delete</button>
 <button (click)="test = 'Changed value'">Change ng-content</button>
 <button (click)="boundValue = 2000">Change binding</button>
