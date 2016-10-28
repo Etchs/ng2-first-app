@@ -1,6 +1,6 @@
 <h1>Data Driven</h1>
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-  <div>
+  <div formGroupName="userData">
     <div class="form-group">
       <label for="username">Username</label>
       <input type="text"
@@ -14,6 +14,9 @@
              class="form-control"
              id="email"
              formControlName="eml">
+      <div *ngIf="!myForm.controls.userData.controls.eml.valid">
+        Invalid email
+      </div>
     </div>
   </div>
 
@@ -24,8 +27,10 @@
            id="password"
            formControlName="psswd">
   </div>
-  <div class="radio">
+  <div class="radio" *ngFor="let g of genders">
     <label>
+      <input type="radio" formControlName="gender" [value]="g">
+      {{g}}
     </label>
   </div>
   <div>
@@ -36,5 +41,5 @@
     </div>
   </div>
   <button type="button" class="btn btn-default">Add Hobby</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
 </form>
